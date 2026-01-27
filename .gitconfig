@@ -1,8 +1,19 @@
 [user]
  name = arnnvv
  email = arnav.900@protonmail.com
+ signingkey = ~/.ssh/id_ed25519.pub
 [push]
  default = current
  autoSetupRemote = true
 [init]
  defaultBranch = main
+[gpg]
+ format = ssh
+[commit]
+ gpgsign = true
+[gc]
+ writeCommitGraph = true
+[core]
+ editor = nvim
+ autocrlf = input
+ commitGraph = true

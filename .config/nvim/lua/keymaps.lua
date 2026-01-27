@@ -2,7 +2,8 @@ vim.keymap.set('n', '<leader>n', ':Explore<CR>')
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', { silent = true })
 vim.keymap.set('n', 'd', '"_d', { noremap = true })
 vim.keymap.set('n', 'D', '"_D', { noremap = true })
-vim.keymap.set('n', '<leader>ff', vim.lsp.buf.format)
+vim.keymap.set('n', 'c', '"_c', { noremap = true })
+vim.keymap.set('n', 'C', '"_C', { noremap = true })
 vim.keymap.set(
   'n',
   '<C-s>',
@@ -15,10 +16,13 @@ vim.keymap.set(
 vim.keymap.set(
   'n',
   '<C-a>',
-  vim.diagnostic.goto_next,
+  function()
+    vim.diagnostic.jump({ count = 1, float = true })
+  end,
   {
-    noremap = true,
     silent = true,
+    noremap = true,
+    desc = "Next Diagnostic",
   }
 )
 vim.keymap.set(
@@ -34,7 +38,7 @@ vim.keymap.set(
 )
 vim.keymap.set(
   'n',
-  '<C-o>',
+  '<C-n>',
   function()
     require('fzf').grep_project()
   end,
