@@ -1,4 +1,4 @@
-HISTFILE=~/.zsh_history
+HISTFILE="$HOME/.zsh_history"
 DISABLE_AUTO_TITLE="true"
 HISTSIZE=5000
 SAVEHIST=2000
@@ -8,6 +8,7 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 PROMPT='%F{#87CEEB}%2~%f '
 path=(
+  "/opt/homebrew/sbin"
   "$HOME/nvim-macos-arm64/bin"
   "$HOME/.local/bin"
   "/opt/homebrew/opt/postgresql@18/bin"

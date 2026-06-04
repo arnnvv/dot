@@ -17,28 +17,21 @@ vim.api.nvim_set_hl(0, 'NormalFloat', {
 })
 
 vim.opt.shell = '/bin/dash'
-vim.opt.clipboard:append('unnamedplus')
+vim.opt.clipboard = 'unnamedplus'
 vim.opt.scrolloff = 10
 vim.opt.mouse = ''
 vim.opt.guicursor = ''
 vim.opt.swapfile = false
-vim.opt.linebreak = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.undofile = true
 
-vim.wo.number = true
-vim.wo.relativenumber = true
-
-vim.o.undofile = true
-
-vim.api.nvim_create_autocmd('InsertEnter', {
-  once = true,
+vim.api.nvim_create_autocmd("BufReadPre", {
   callback = function()
-    require('autopair').setup_autopairs()
+    require("lsp")
   end,
 })
-require('lsp')
+
 require('keymaps')
-vim.pack.add({
-  "https://github.com/saghen/blink.cmp",
-})

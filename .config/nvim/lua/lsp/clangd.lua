@@ -1,7 +1,6 @@
 vim.lsp.config('clangd', {
   cmd = {
     'clangd',
-    '-j=' .. 2,
     '--background-index',
     '--clang-tidy',
     '--inlay-hints',
@@ -17,7 +16,6 @@ vim.lsp.config('clangd', {
     'cpp',
     'objc',
     'cuda',
-    'proto',
     'objcpp',
     },
   root_markers = {
@@ -29,7 +27,6 @@ vim.lsp.config('clangd', {
     'compile_flags.txt',
     'configure.ac',
     '.git',
-    vim.uv.cwd(),
   },
 })
 

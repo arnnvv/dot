@@ -1,11 +1,5 @@
 background = #000000
-background-opacity = 0.65
-background-blur-radius = 20
-cursor-style-blink = false
 macos-titlebar-style = hidden
-mouse-hide-while-typing = true
-window-height = 510
-window-width = 1640
 window-padding-x = 10
 window-padding-y = 10
 shell-integration-features = no-cursor
