@@ -3,7 +3,6 @@ vim.lsp.config('clangd', {
     'clangd',
     '--background-index',
     '--clang-tidy',
-    '--inlay-hints',
     '--fallback-style=llvm',
     '--all-scopes-completion',
     '--completion-style=detailed',
